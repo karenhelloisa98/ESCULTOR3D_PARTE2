@@ -21,16 +21,15 @@ vector<FiguraGeometrica*> Leitor::interpretador(string filename) {
     vector<FiguraGeometrica*> figuras;
     string s, token;
     stringstream ss;
-    ifstream inFile;
-    inFile.open(filename);
+    ifstream arquivo;
+    arquivo.open(filename);
 
-    if (!inFile.is_open()) { // verifica se o arquivo abriu direitinho
+    if (!arquivo.is_open()) {
         cout << "Não foi possivel abrir " << filename << ".\n" << endl;
         exit(0);
     }
 
-    while (inFile.good()) {
-        getline(inFile, s);
+    while (getline(arquivo, s)) {
             ss.clear();
             ss.str(s);
             ss >> token;
@@ -88,9 +87,9 @@ vector<FiguraGeometrica*> Leitor::interpretador(string filename) {
 
                 }
             }
-    inFile.close();
-    return(figuras);
         }
+    arquivo.close();
+    return(figuras);
     }
 
 

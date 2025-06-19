@@ -22,7 +22,7 @@
 1750355834 c:\programacao avancada\escultor3d-parte2\figurageometrica.h
 	"Sculptor.h"
 
-1750361377 source:c:\programacao avancada\escultor3d-parte2\leitor.cpp
+1750362473 source:c:\programacao avancada\escultor3d-parte2\leitor.cpp
 	"leitor.h"
 	<iostream>
 	<string>

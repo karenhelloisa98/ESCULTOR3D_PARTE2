@@ -1,2 +1,2 @@
-dim 10 10 10
-putVoxel 1 1 1 1 1 0 1
+dim 20 20 20 
+putSphere 6 6 6 6 6 6 1 0 0 1
