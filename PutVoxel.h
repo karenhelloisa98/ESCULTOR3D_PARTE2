@@ -6,6 +6,7 @@
 class PutVoxel : public FiguraGeometrica{
 protected:
     int x, y, z;
+    float r, g, b, a;
 public:
     PutVoxel(int x, int y, int z, float r, float g, float b, float a);
     ~PutVoxel();

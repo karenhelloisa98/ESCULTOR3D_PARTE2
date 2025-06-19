@@ -11,7 +11,7 @@ class Leitor{
     float r, g, b, a;
 public:
     Leitor();
-    std::vector<FiguraGeometrica*> parse(std::string filename);
+    std::vector<FiguraGeometrica*>interpretador(std::string filename);
     int getdx();
     int getdy();
     int getdz();

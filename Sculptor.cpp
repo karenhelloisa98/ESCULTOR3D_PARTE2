@@ -80,10 +80,7 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
         for(int j=y0;j<y1;j++){
             for(int k=z0;k<z1;k++){
                 v[i][j][k].r = r;
-                v[i][j][k].g = g;
-                v[i][j][k].b = b;
-                v[i][j][k].a = a;
-                v[i][j][k].show = true;
+                putVoxel(i,j,k);
             }
         }
     }
@@ -95,7 +92,7 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
     for(int i=x0;i<x1;i++){
         for(int j=y0;j<y1;j++){
             for(int k=z0;k<z1;k++){
-                v[i][j][k].show = false;
+                cutVoxel(i,j,k);
             }
         }
     }
@@ -121,7 +118,7 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     int y0 = ycenter - ry;
     int y1 = ycenter + ry;
     int z0 = zcenter - rz;
-    int z1 = xcenter + rz;
+    int z1 = zcenter + rz;
 
     for (int i = x0; i <= x1; i++) {
         for (int j = y0; j <= y1; j++) {
