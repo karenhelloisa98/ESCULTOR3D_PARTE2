@@ -1,6 +1,6 @@
-#include "PutEllipsoid.h
+#include "PutEllipsoid.h"
 
-PutEllipsoid::PutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz, int r, int g, int b, int a){
+PutEllipsoid::PutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz, float r, float g, float b, float a){
     this->xcenter=xcenter;
     this->ycenter=ycenter;
     this->zcenter=zcenter;
@@ -11,14 +11,11 @@ PutEllipsoid::PutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry
     this->g=g;
     this->b=b;
     this->a=a;
-
 }
 
-PutEllipsoid::~PutEllipsoid(){
-
-}
+PutEllipsoid::~PutEllipsoid(){};
 
 void PutEllipsoid::draw(Sculptor &t){
-    t.setColor(r, g, b, a)
-    t.putEllipsoid(xcenter, ycenter, zcenter, rx, ry, rz)
+    t.setColor(r, g, b, a);
+    t.putEllipsoid(xcenter, ycenter, zcenter, rx, ry, rz);
 }

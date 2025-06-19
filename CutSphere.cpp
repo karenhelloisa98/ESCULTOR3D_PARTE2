@@ -7,9 +7,7 @@ CutSphere::CutSphere(int xcenter, int ycenter, int zcenter, int radius){
     this->radius = radius;
 }
 
-CutSphere::~CutSphere(){
-
-}
+CutSphere::~CutSphere(){}
 
 void CutSphere::draw(Sculptor &t){
     t.cutSphere(xcenter, ycenter, zcenter, radius);

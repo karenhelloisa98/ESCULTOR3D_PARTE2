@@ -32,70 +32,31 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="CutBox.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="CutBox.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="CutEllipsoid.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="CutEllipsoid.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="CutSphere.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="CutSphere.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="CutVoxel.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="CutVoxel.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="FiguraGeometrica.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="FiguraGeometrica.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="PutBox.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="PutBox.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="PutEllipsoid.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="PutSphere.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="PutSphere.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="PutVoxel.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="PutVoxel.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Sculptor.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Sculptor.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Voxel.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="Cut Ellipsoid.h" />
+		<Unit filename="CutBox.cpp" />
+		<Unit filename="CutBox.h" />
+		<Unit filename="CutEllipsoid.cpp" />
+		<Unit filename="CutEllipsoid.h" />
+		<Unit filename="CutSphere.cpp" />
+		<Unit filename="CutSphere.h" />
+		<Unit filename="CutVoxel.cpp" />
+		<Unit filename="CutVoxel.h" />
+		<Unit filename="FiguraGeometrica.cpp" />
+		<Unit filename="FiguraGeometrica.h" />
+		<Unit filename="PutBox.cpp" />
+		<Unit filename="PutBox.h" />
+		<Unit filename="PutEllipsoid.h" />
+		<Unit filename="PutSphere.cpp" />
+		<Unit filename="PutSphere.h" />
+		<Unit filename="PutVoxel.cpp" />
+		<Unit filename="PutVoxel.h" />
+		<Unit filename="Sculptor.cpp" />
+		<Unit filename="Sculptor.h" />
+		<Unit filename="Voxel.h" />
+		<Unit filename="leitor.cpp" />
+		<Unit filename="leitor.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="putEllipsoid.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="putEllipsoid.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

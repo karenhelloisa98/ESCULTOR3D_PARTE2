@@ -5,9 +5,7 @@ CutVoxel::CutVoxel(int x, int y, int z){
      this->y = y;
      this->z = x;
 }
-CutVoxel::~CutVoxel(){
-
-}
+CutVoxel::~CutVoxel(){}
 void CutVoxel::draw(Sculptor &t){
     t.cutVoxel(x,y,z);
 }

@@ -1,5 +1,7 @@
 #ifndef PUTELLIPSOID_H_INCLUDED
 #define PUTELLIPSOID_H_INCLUDED
+#include "FiguraGeometrica.h"
+#include "Sculptor.h"
 
 class PutEllipsoid : public FiguraGeometrica{
 protected:

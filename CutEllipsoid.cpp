@@ -9,10 +9,8 @@ CutEllipsoid::CutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry
     this->rz=rz;
 }
 
-CutEllipsoid::~CutEllipsoid(){
-
-}
+CutEllipsoid::~CutEllipsoid(){}
 
 void CutEllipsoid::draw(Sculptor &t){
-    t.cutEllipsoid(xcenter, ycenter, zcenter, rx, ry, rz)
+    t.cutEllipsoid(xcenter, ycenter, zcenter, rx, ry, rz);
 }
