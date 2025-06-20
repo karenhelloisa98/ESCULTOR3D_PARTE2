@@ -11,7 +11,10 @@ class Leitor{
     float r, g, b, a;
 public:
     Leitor();
-    std::vector<FiguraGeometrica*>interpretador(std::string filename);
+    std::vector<FiguraGeometrica*>interpretador(std::string filename); //LÊ UM ARQUIVO DE TEXTO COM INSTRUÇÕES, INTERPRETA CADA LINHA, CRIA OBJETOS
+                                                                       //CORRESPONDENTES DO TIPO FIGURA GEOMÉTRICA* E RETORNA UM VETOR CONTENDO
+                                                                       //TODOS ESSES OBJETOS
+    //PERMITEM O ACESSO DAS DIMENSÕES DO ESPAÇO 3D DEPOIS QUE O ARQUIVO FOI LIDO
     int getdx();
     int getdy();
     int getdz();

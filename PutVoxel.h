@@ -6,11 +6,10 @@
 class PutVoxel : public FiguraGeometrica{
 protected:
     int x, y, z;
-    float r, g, b, a;
 public:
     PutVoxel(int x, int y, int z, float r, float g, float b, float a);
     ~PutVoxel();
-    void draw(Sculptor &t); //sobrecarga do método draw, deve ter a mesma assinatura da superclasse
+    void draw(Sculptor &t);
 };
 
 

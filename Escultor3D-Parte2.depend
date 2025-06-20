@@ -11,18 +11,18 @@
 1750348205 c:\programacao avancada\escultor3d-parte2\sculptor.h
 	"Voxel.h"
 
-1750158920 c:\programacao avancada\escultor3d-parte2\voxel.h
+1750438001 c:\programacao avancada\escultor3d-parte2\voxel.h
 
-1750356422 c:\programacao avancada\escultor3d-parte2\leitor.h
+1750441252 c:\programacao avancada\escultor3d-parte2\leitor.h
 	<vector>
 	<string>
 	<iostream>
 	"FiguraGeometrica.h"
 
-1750355834 c:\programacao avancada\escultor3d-parte2\figurageometrica.h
+1750438001 c:\programacao avancada\escultor3d-parte2\figurageometrica.h
 	"Sculptor.h"
 
-1750362473 source:c:\programacao avancada\escultor3d-parte2\leitor.cpp
+1750367936 source:c:\programacao avancada\escultor3d-parte2\leitor.cpp
 	"leitor.h"
 	<iostream>
 	<string>
@@ -37,7 +37,7 @@
 	"PutEllipsoid.h"
 	"CutEllipsoid.h"
 
-1750360429 c:\programacao avancada\escultor3d-parte2\putvoxel.h
+1750439868 c:\programacao avancada\escultor3d-parte2\putvoxel.h
 	"Sculptor.h"
 	"FiguraGeometrica.h"
 
@@ -45,7 +45,7 @@
 	"Sculptor.h"
 	"FiguraGeometrica.h"
 
-1750360089 c:\programacao avancada\escultor3d-parte2\putbox.h
+1750438001 c:\programacao avancada\escultor3d-parte2\putbox.h
 	"FiguraGeometrica.h"
 	"Sculptor.h"
 
@@ -53,7 +53,7 @@
 	"Sculptor.h"
 	"FiguraGeometrica.h"
 
-1750360403 c:\programacao avancada\escultor3d-parte2\putsphere.h
+1750438001 c:\programacao avancada\escultor3d-parte2\putsphere.h
 	"FiguraGeometrica.h"
 	"Sculptor.h"
 
@@ -61,7 +61,7 @@
 	"FiguraGeometrica.h"
 	"Sculptor.h"
 
-1750360403 c:\programacao avancada\escultor3d-parte2\putellipsoid.h
+1750438001 c:\programacao avancada\escultor3d-parte2\putellipsoid.h
 	"FiguraGeometrica.h"
 	"Sculptor.h"
 
@@ -87,7 +87,7 @@
 1750344194 source:c:\programacao avancada\escultor3d-parte2\putvoxel.cpp
 	"PutVoxel.h"
 
-1750359765 source:c:\programacao avancada\escultor3d-parte2\sculptor.cpp
+1750438001 source:c:\programacao avancada\escultor3d-parte2\sculptor.cpp
 	"Sculptor.h"
 	"Voxel.h"
 	<fstream>

@@ -1,2 +1,5 @@
-dim 20 20 20 
-putSphere 6 6 6 6 6 6 1 0 0 1
+dim 30 40 30
+putsphere 15 30 15 6 1 0 1 1
+cutbox 9 21 30 36 15 21
+putbox 14 16 0 28 14 16 1 1 1 1
+cutvoxel 15 10 15

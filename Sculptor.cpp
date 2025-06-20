@@ -1,27 +1,26 @@
 #include "Sculptor.h"
 #include "Voxel.h"
-#include <fstream>
-#include <iomanip>
-#include <iostream>
+#include <fstream> //BIBLIOTECA PARA TRABALHAR COM A GRAVAÇÃO DO ARQUIVO .OFF
+#include <iomanip> //BIBLIOTECA PARA TRABALHAR COM A FORMATAÇÃO DE SAÍDA (SETPRECISION)
+#include <iostream> //BIBLIOTECA PARA TRABALHAR COM A SAÍDA NO TERMINAL COUT
 
 //MÉTODO CONSTRUTUTOR DA CLASSE
-Sculptor::Sculptor(int _nx, int _ny, int _nz)
-{
+Sculptor::Sculptor(int _nx, int _ny, int _nz){
     nx = _nx;
     ny = _ny;
     nz = _nz;
 
-    //ALOCAÇÃO DA MEMÓRIA
-    v = new Voxel **[nx];
+    //ALOCAÇÃO DA MEMÓRIA E CRIAÇÃO DA MATRIZ DINÂMICA
+    v = new Voxel **[nx]; //VETOR DE PONTEIROS PARA PONTEIROS (PRIMEIRA DIMENSÃO)
 
     for(int i=0; i<nx; i++){
-        v[i] = new Voxel *[ny];
+        v[i] = new Voxel *[ny]; //VETOR DE PONTEIROS (SEGUNDA DIMENSÃO)
             for (int j=0; j<ny; j++){
-                v[i][j] = new Voxel [nz];
+                v[i][j] = new Voxel [nz]; //VETOR (TERCEIRA DIMENSÃO)
         }
     }
 
-    //INICIALIZAÇÃO DOS VOXELS
+    //INICIALIZAÇÃO DOS VOXELS COMO INVISÍVEIS E SEM COR
     for(int i=0; i<nx; i++){
         for(int j=0; j<ny; j++){
             for(int k=0; k<nz; k++){
@@ -36,8 +35,8 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
 }
 
 //MÉTODO DESTRUTOR DA CLASSE
-Sculptor::~Sculptor()
-{
+Sculptor::~Sculptor(){
+//LIBERAÇÃO DA MEMÓRIA ALOCADA NO CONSTRUTOR
         for(int i=0;i<nx;i++){
                 for(int j=0;j<ny;j++){
                     delete [] v[i][j];
@@ -48,8 +47,7 @@ Sculptor::~Sculptor()
 }
 
 //DEFINE A ATUAL COR DO DESENHO
-void Sculptor::setColor(float r, float g, float b, float a)
-{
+void Sculptor::setColor(float r, float g, float b, float a){
     this->r = r;
     this->g = g;
     this->b = b;
@@ -57,8 +55,7 @@ void Sculptor::setColor(float r, float g, float b, float a)
 }
 
 //ATIVA O VOXEL NA POSIÇÃO (X,Y,Z) FAZENDO SHOW = TRUE E ATRIBUI AO MESMO A COR ATUAL DE DESENHO
-void Sculptor::putVoxel(int x, int y, int z)
-{
+void Sculptor::putVoxel(int x, int y, int z){
     v[x][y][z].show = true;
     v[x][y][z].r = r;
     v[x][y][z].g = g;
@@ -68,14 +65,12 @@ void Sculptor::putVoxel(int x, int y, int z)
 }
 
 //DESATIVA O VOXEL NA POSIÇÃO (X,Y,Z) FAZENDO SHOW = FALSE
-void Sculptor::cutVoxel(int x, int y, int z)
-{
+void Sculptor::cutVoxel(int x, int y, int z){
     v[x][y][z].show = false;
 }
 
 //ATIVA TODOS OS VOXELS NO INTERVALO E ATRIBUI AOS MESMOS A COR ATUAL DE DESENHO)
-void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
-{
+void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
     for(int i=x0;i<x1;i++){
         for(int j=y0;j<y1;j++){
             for(int k=z0;k<z1;k++){
@@ -87,8 +82,7 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 }
 
 //DESATIVA TODOS OS VOXELS NO INTERVALO E ATRIBUI AOS MESMOS A COR ATUAL DE DESENHO
-void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
-{
+void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
     for(int i=x0;i<x1;i++){
         for(int j=y0;j<y1;j++){
             for(int k=z0;k<z1;k++){
@@ -99,20 +93,17 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
 }
 
 //ATIVA OS VOXELS PARA DESENHAR A ESFERA
-void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
-{
+void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
         putEllipsoid(xcenter, ycenter, zcenter, radius, radius, radius);
 }
 
 //DESATIVA OS VOXELS PARA DESENHAR A ESFERA
-void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
-{
+void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
         cutEllipsoid(xcenter, ycenter, zcenter, radius, radius, radius);
 }
 
 //ATIVA OS VOXELS PARA DESENHAR A ELIPSE
-void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
-{
+void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
     int x0 = xcenter - rx;
     int x1 = xcenter + rx;
     int y0 = ycenter - ry;
@@ -139,8 +130,7 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 }
 
 //DESATIVA OS VOXELS PARA CORTAR A ESFERA
-void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
-{
+void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
     int x0 = xcenter - rx;
     int x1 = xcenter + rx;
     int y0 = ycenter - ry;
@@ -168,10 +158,10 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 
 void Sculptor::writeOFF(const char* filename)
 {
-    std::ofstream fout;
+    std::ofstream fout; //CRIANDO O FLUXO DE SAÍDA
+    fout.open(filename);//ABRE UM FLUXO DE SAÍDA PARA ESCREVER NO ARQUIVO
 
-    fout.open(filename);
-    if (!fout.is_open())
+    if (!fout.is_open()) //VERIFICAÇÃO SE O ARQUIVO FOI ABERTO CORRETAMENTE
     {
         std::cout<<"Arquivo não aberto!\n";
         exit(1);
@@ -185,7 +175,7 @@ void Sculptor::writeOFF(const char* filename)
         for(int j=0;j<ny;j++){
             for(int k=0;k<nz;k++){
                 if(v[i][j][k].show == true){
-                    nvoxels++; //CONTABILIZAÇÃO DA QUANTIDADE DE VOXELS INDIVIDUAIS
+                    nvoxels++; //CONTABILIZAÇÃO DA QUANTIDADE DE VOXELS INDIVIDUAIS ATIVOS
                 }
             }
         }
@@ -240,7 +230,7 @@ void Sculptor::writeOFF(const char* filename)
             }
         }
     }
-    fout.close();
+    fout.close(); //FECHA ARQUIVO APÓS SALVAR TUDO
 }
 
 
